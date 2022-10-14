@@ -1,1 +1,67 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><title>my-app</title><script defer="defer" src="js/chunk-vendors.83904e34.js"></script><script defer="defer" src="js/app.31a2835c.js"></script><link href="css/app.0a61f909.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but my-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CyjGame2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      canvas {
+        border: 1px black solid;
+      }
+      .alert {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        right: 50%;
+      }
+      #id-scroll {
+        position: absolute;
+        top: 0;
+        font-size: 40px;
+      }
+    </style>
+    <!--  cyjgame 相关文件  -->
+    <!-- <script src="/src/cyjgame/utils.js"></script>
+    <script src="/src/cyjgame/mouse.js"></script>
+    <script src="/src/cyjgame/cyj_game.js"></script>
+    <script src="/src/cyjgame/cyj_scene.js"></script>
+    <script src="/src/cyjgame/cyj_image.js"></script>
+    <script src="/src/cyjgame/cyj_label.js"></script>
+    <script src="/src/cyjgame/cyj_rect.js"></script> -->
+
+    <!--  场景文/ -->
+    <!-- <script src="/src/scene/main/scene.js"></script>
+    <script src="/src/scene/end/scene_end.js"></script>
+    <script src="/src/scene/title/scene_title.js"></script> -->
+    <!--  配置数据  -->
+    <!-- <script src="/src/config.js"></script> -->
+    <script type="module" crossorigin src="./assets/index.c8b20b8f.js"></script>
+  </head>
+
+  <body>
+    <canvas id="id-canvas"></canvas>
+    <div id="id-scroll">0</div>
+    <div class="start-button">开始游戏</div>
+    <div class="cyj-controls"></div>
+  </body>
+</html>
