@@ -13,6 +13,7 @@ export default defineConfig({
     alias: {
       "@": resolvePath("src"), // 设置 @ 别名指向 src 目录
       "~": resolvePath("node_modules"), // 可以设置更多别名
+      "@emotion/react/jsx-runtime": '/node_modules/@emotion/react/jsx-runtime',
     },
   },
   css: {
