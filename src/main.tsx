@@ -27,7 +27,7 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals()
 // Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
+function raf(time: number) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }

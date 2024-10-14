@@ -21,9 +21,9 @@ const Home = memo(() => {
       <h2 className="text-white h-[100vh]">{highScore.title}</h2>
       <h2>{highScore.subtitle}</h2>
       <ul>
-        {highScore.list?.map((item: any) => {
+        {/* {highScore.list?.map((item: any) => {
           return <li key={item.id}>{item.name}</li>
-        })}
+        })} */}
       </ul>
     </div>
   )

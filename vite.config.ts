@@ -27,6 +27,15 @@ export default defineConfig({
         // 这里可以添加Less编译选项，如果不需要可以留空
       }
     }
-  }
-
+  },
+  build: {
+    rollupOptions: {
+      external: ['@emotion/react/jsx-runtime'],
+      output: {
+        globals: {
+          '@emotion/react/jsx-runtime': '@emotion/react/jsx-runtime',
+        },
+      },
+    },
+  },
 })
