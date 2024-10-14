@@ -8,12 +8,11 @@ const resolvePath = (pathname: string) => path.resolve(__dirname, pathname)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: "/",
   resolve: {
     alias: {
       "@": resolvePath("src"), // 设置 @ 别名指向 src 目录
       "~": resolvePath("node_modules"), // 可以设置更多别名
-      "@emotion/react/jsx-runtime": '/node_modules/@emotion/react/jsx-runtime',
     },
   },
   css: {
@@ -29,14 +28,5 @@ export default defineConfig({
       }
     }
   },
-  build: {
-    rollupOptions: {
-      external: ['@emotion/react/jsx-runtime'],
-      output: {
-        globals: {
-          '@emotion/react/jsx-runtime': '@emotion/react/jsx-runtime',
-        },
-      },
-    },
-  },
+
 })
