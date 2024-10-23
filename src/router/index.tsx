@@ -1,3 +1,4 @@
+import { Step } from "@/views/step"
 import React from "react"
 import { Navigate } from "react-router-dom"
 
@@ -21,6 +22,16 @@ const routes = [
   {
     path: "/detail",
     element: <Detail />,
+  },
+  {
+    path: "/step",
+    element: <Step />,
+    children: [
+      {
+        path: "/step/:id",
+        element: <Step />,
+      },
+    ],
   },
 ]
 
