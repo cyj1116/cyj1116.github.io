@@ -78,7 +78,12 @@ export const CustomProgressBar: React.FC<CustomProgressBarProps> = ({
 
   return (
     <div className="w-[100%] h-[40px]">
-      <Progress className="w-[100%]" percent={percent} showInfo={false} />
+      <Progress
+        className="w-[100%]"
+        percent={percent}
+        showInfo={false}
+        strokeColor={"#0079d6"}
+      />
       {renderPercentText()}
     </div>
   )

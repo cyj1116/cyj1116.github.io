@@ -29,7 +29,12 @@ export default function Interview() {
       <Button type="primary" onClick={() => handleClickBtn()}>
         Step++
       </Button>
-      {step}
+      <div className="text-center">
+        和我之前做的 OPPO 体验官非常像,
+        也是有进度条然后阶段一二三然后让用户填表格,<br></br>
+        那会还做到了刷新保留状态, 点返回也撤销状态<br></br>
+        不清楚这个需不需要, 要写的话也很快的
+      </div>
     </div>
   )
 }

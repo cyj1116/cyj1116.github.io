@@ -1,4 +1,4 @@
-import Interview from "@/components/interview.tsx"
+import Interview from "@/components/interview"
 import React from "react"
 
 export const Step = () => {
