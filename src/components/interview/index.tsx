@@ -23,7 +23,7 @@ export default function Interview() {
   }
 
   return (
-    <div className="flex flex-col items-center  text-[#0079d6] bg-[rgb(2,0,36)] bg-gradient-to-b from-[rgba(150,237,255,1)] to-[rgba(255,255,255,1)]">
+    <div className="flex flex-col items-center  text-[#0079d6] bg-[rgb(2,0,36)] bg-gradient-to-b from-[#caefff] to-[rgba(255,255,255,1)]">
       <div className="flex justify-center w-[1312px]">
         {data.map((item: IData) => (
           <Inner data={item} key={item.id} currentStep={step} />
