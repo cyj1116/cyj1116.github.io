@@ -32,8 +32,10 @@ export default function Interview() {
       <Button type="primary" onClick={() => handleClickBtn()}>
         Step++
       </Button>
-      不清楚step1 的初始状态是什么样的, 就先采取了自动播放,
-      如果需要默认留空的话改起来也很快的
+      <div className="text-center py-[12px]">
+        不清楚 step1 的初始状态是什么样的, 就先采取了step1自动播放,<br></br>
+        如果需要默认留空的话我也有思路, 改起来也很快的
+      </div>
     </div>
   )
 }
