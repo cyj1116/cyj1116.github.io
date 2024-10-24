@@ -5,6 +5,7 @@ import AppFooter from "./components/app-footer"
 import { Navigate, Route, Routes } from "react-router-dom"
 import Home from "./views/home"
 import { Step } from "./views/step"
+import Step1 from "./views/step/c-cpns/step-1"
 
 // const lenis = new Lenis()
 // Use requestAnimationFrame to continuously update the scroll
@@ -22,7 +23,9 @@ const App = memo(() => {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/step/*" element={<Step />} />
+        <Route path="/step" element={<Step />}>
+          <Route path=":id" element={<Step1 />} />
+        </Route>
       </Routes>
       <AppFooter />
     </div>

@@ -39,6 +39,7 @@ export const CustomProgressBar: React.FC<CustomProgressBarProps> = ({
     let intervalId: NodeJS.Timeout
 
     if (totalTime > 0) {
+      // 能播放的话开播
       if (canPlay) {
         intervalId = setInterval(() => {
           setPercent((prevPercent) => {
@@ -55,8 +56,11 @@ export const CustomProgressBar: React.FC<CustomProgressBarProps> = ({
           })
         }, 1000 / 30) // 每帧的时间间隔
       }
+      // 之后只有两种情况 要么跳过 要么归零
       if (canSkip) {
         setPercent(100)
+      } else {
+        setPercent(0)
       }
     }
 

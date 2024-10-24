@@ -10,17 +10,18 @@ interface IProps {
 export const Inner: React.FC<IProps> = ({ data, currentStep }) => {
   const [canPlay, setCanPlay] = useState(false)
   const [canSkip, setCanSkip] = useState(false)
+  const [step, setStep] = useState(data.step)
 
   useEffect(() => {
-    if (currentStep === data.step) {
+    if (currentStep === step) {
       setCanPlay(true)
-    } else if (currentStep > data.step) {
+    } else if (currentStep > step) {
       setCanSkip(true)
     } else {
       setCanPlay(false)
       setCanSkip(false)
     }
-  }, [currentStep, data.step])
+  }, [currentStep, step])
 
   return (
     <div className="w-[25%] h-[140px] px-[12px] py-[24px] flex flex-col justify-between items-center">

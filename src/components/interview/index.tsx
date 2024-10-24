@@ -5,11 +5,14 @@ import { Inner } from "./c-cpns/inner"
 import { useNavigate, useParams } from "react-router-dom"
 
 export default function Interview() {
-  const { id } = useParams<{ id: string }>()
-  const [step, setStep] = useState(Number(id) || 1)
+  let { id } = useParams()
+  if (typeof id !== "string") {
+    id = "1"
+  }
+  const [step, setStep] = useState(Number(id))
   const navigate = useNavigate()
   useEffect(() => {
-    setStep(Number(id) || 1)
+    setStep(Number(id))
   }, [id])
   const handleClickBtn = () => {
     if (step >= 4) {
@@ -29,12 +32,6 @@ export default function Interview() {
       <Button type="primary" onClick={() => handleClickBtn()}>
         Step++
       </Button>
-      <div className="text-center">
-        和我之前做的 OPPO 体验官非常像,
-        也是有进度条然后阶段一二三然后让用户填表格,<br></br>
-        那会还做到了刷新保留状态, 点返回也撤销状态<br></br>
-        不清楚这个需不需要, 要写的话也很快的
-      </div>
     </div>
   )
 }
