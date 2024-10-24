@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const AppHeader = memo(() => {
   const navigate = useNavigate()
   const handleNavigate = () => {
-    navigate("/step/1")
+    navigate("/step")
   }
   const handleGoHome = () => {
     navigate("/home")

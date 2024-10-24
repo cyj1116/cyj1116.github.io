@@ -7,7 +7,7 @@ import { useNavigate, useParams } from "react-router-dom"
 export default function Interview() {
   let { id } = useParams()
   if (typeof id !== "string") {
-    id = "1"
+    id = "0"
   }
   const [step, setStep] = useState(Number(id))
   const navigate = useNavigate()
@@ -32,10 +32,7 @@ export default function Interview() {
       <Button type="primary" onClick={() => handleClickBtn()}>
         Step++
       </Button>
-      <div className="text-center py-[12px]">
-        不清楚 step1 的初始状态是什么样的, 就先采取了step1自动播放,<br></br>
-        如果需要默认留空的话我也有思路, 改起来也很快的
-      </div>
+      <div className="text-center py-[12px]"></div>
     </div>
   )
 }
